@@ -25,12 +25,12 @@ $row = mysqli_fetch_assoc($result);
 
 		<div class="row">
 			<div class="col-md-12">
-				<img class="main-img-cars" src="../../public/img-cars/<?php echo $row['id']?>/main<?php echo $row['id']?>.jpg">
+				<img  id='img-upload' class="main-img-cars" src="../../public/img-cars/<?php echo $row['id']?>/main<?php echo $row['id']?>.jpg">
 			</div>
 
 			<div class="form-group">
-			<label for="image" >Change Main picture</label>
-			<input type="file"  name="image" id="image"  accept=".jpg,.gif,.png">
+			<label for="imgInp" >Change Main picture</label>
+			<input type="file"  name="image" id="imgInp"  accept=".jpg,.gif,.png">
 		</div>
 
 
@@ -228,3 +228,7 @@ if(isset($_POST['submit'])){
 </script>
 
   <?php include "footer.php"; ?>
+
+
+  
+ <script src="js/main-picture-preview.js"></script>
